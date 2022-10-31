@@ -8,14 +8,14 @@ git credentialsId: '6c877ad5-0c9f-420a-a2e0-2bf39c9fdcc5', url: 'https://github.
 
 //Build
 stage('Build'){
-nodejs(nodeJSInstallationName: 'nodejs10.24.0'){
+nodejs(nodeJSInstallationName: 'nodejs19.0.0'){
 sh "npm install"
 }
 }
 
 //Execute SOnarQUbe Report
 stage('SonarQubeMSS'){
-nodejs(nodeJSInstallationName: 'nodejs10.24.0'){
+nodejs(nodeJSInstallationName: 'nodejs19.0.0'){
 sh "npm run sonar"
 }
 }
